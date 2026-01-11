@@ -1,224 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vilamoura Golf Trip Offer</title>
-  <style>
-    body {
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f4f6f8;
-      margin: 0;
-      padding: 40px 20px;
-      color: #2c2c2c;
-    }
+    <meta charset="UTF-8">
+    <title>Golf Trip Options</title>
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
-    h1 {
-      text-align: center;
-      margin-bottom: 10px;
-      font-size: 2.4rem;
-    }
-
-    .subtitle {
-      text-align: center;
-      color: #666;
-      margin-bottom: 40px;
-    }
-
-    .overview {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-      margin-bottom: 40px;
-    }
-
-    .overview ul {
-      list-style: none;
-      padding: 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-    }
-
-    .overview li {
-      font-weight: 500;
-    }
-
-    .options {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: #ffffff;
-      border-radius: 14px;
-      padding: 30px;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-      position: relative;
-    }
-
-    .card h2 {
-      margin-top: 0;
-      font-size: 1.6rem;
-    }
-
-    .badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #0a8754;
-      color: white;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: bold;
-    }
-
-    .luxury {
-      background: #2b2f38;
-    }
-
-    .luxury .badge {
-      background: #caa64b;
-    }
-
-    .luxury, .luxury h2, .luxury h3, .luxury li {
-      color: #ffffff;
-    }
-
-    h3 {
-      margin-bottom: 10px;
-      margin-top: 25px;
-      font-size: 1.1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.15);
-      padding-bottom: 6px;
-    }
-
-    ul {
-      padding-left: 18px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-      font-size: 0.95rem;
-    }
-
-    table th, table td {
-      padding: 10px;
-      text-align: left;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .luxury table th, .luxury table td {
-      border-color: rgba(255,255,255,0.2);
-    }
-
-    .highlight {
-      font-weight: bold;
-      color: #0a8754;
-    }
-
-    .luxury .highlight {
-      color: #f0d37a;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.85rem;
-      color: #777;
-    }
-  </style>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+        .option {
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 20px;
+        }
+        .option h2 {
+            margin-top: 0;
+            font-size: 18px;
+            border-bottom: 2px solid #2c7be5;
+            padding-bottom: 8px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        .label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .label i {
+            color: #2c7be5;
+            width: 16px;
+            text-align: center;
+        }
+        .total {
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 16px;
+            text-align: right;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
+    <h1>Golf Trip Options</h1>
 
-  <h1>Vilamoura Golf Trip Offer</h1>
-  <p class="subtitle">9–13 April 2026 · 4 Guests · 3 Rounds of Golf</p>
+    <div class="options">
 
-  <div class="overview">
-    <ul>
-      <li>🏨 4 Nights Accommodation</li>
-      <li>⛳ 3 Golf Rounds per Person</li>
-      <li>🍽️ Bed & Breakfast Included</li>
-      <li>🚌 Complimentary Golf Shuttle</li>
-      <li>📶 Wi-Fi & In-Room Amenities</li>
-      <li>💶 VAT Included (Tourist Tax Excluded)</li>
-    </ul>
-  </div>
+        <!-- Faro Shared -->
+        <div class="option">
+            <h2>Faro – Shared</h2>
+            <ul>
+                <li><span class="label"><i class="fa-solid fa-plane-arrival"></i>Arrival (20:20)</span><span>€108</span></li>
+                <li><span class="label"><i class="fa-solid fa-plane-departure"></i>Departure (09:20)</span><span>€152</span></li>
+                <li><span class="label"><i class="fa-solid fa-hotel"></i>Accommodation (Sharing)</span><span>€240</span></li>
+                <li><span class="label"><i class="fa-solid fa-bus"></i>Transfer</span><span>€25</span></li>
+                <li><span class="label"><i class="fa-solid fa-golf-ball-tee"></i>Golf</span><span>€513</span></li>
+            </ul>
+            <div class="total">Total: €1,038</div>
+        </div>
 
-  <div class="options">
+        <!-- Faro Single -->
+        <div class="option">
+            <h2>Faro – Single</h2>
+            <ul>
+                <li><span class="label"><i class="fa-solid fa-plane-arrival"></i>Arrival (20:20)</span><span>€108</span></li>
+                <li><span class="label"><i class="fa-solid fa-plane-departure"></i>Departure (09:20)</span><span>€152</span></li>
+                <li><span class="label"><i class="fa-solid fa-hotel"></i>Accommodation (Single)</span><span>€448</span></li>
+                <li><span class="label"><i class="fa-solid fa-bus"></i>Transfer</span><span>€25</span></li>
+                <li><span class="label"><i class="fa-solid fa-golf-ball-tee"></i>Golf</span><span>€513</span></li>
+            </ul>
+            <div class="total">Total: €1,246</div>
+        </div>
 
-    <!-- HYATT -->
-    <div class="card luxury">
-      <span class="badge">PREMIUM STAY</span>
-      <h2>Hyatt Regency Vilamoura</h2>
+        <!-- Murcia -->
+        <div class="option">
+            <h2>Murcia</h2>
+            <ul>
+                <li><span class="label"><i class="fa-solid fa-plane-arrival"></i>Arrival (20:55)</span><span>€120</span></li>
+                <li><span class="label"><i class="fa-solid fa-plane-departure"></i>Departure (11:25)</span><span>€210</span></li>
+                <li><span class="label"><i class="fa-solid fa-hotel"></i>Accommodation</span><span>€30</span></li>
+                <li><span class="label"><i class="fa-solid fa-mug-hot"></i>Breakfast</span><span>€60</span></li>
+                <li><span class="label"><i class="fa-solid fa-car"></i>Car Hire</span><span>€60</span></li>
+                <li><span class="label"><i class="fa-solid fa-golf-ball-tee"></i>Golf</span><span>€280</span></li>
+            </ul>
+            <div class="total">Total: €760</div>
+        </div>
 
-      <h3>Accommodation (per person)</h3>
-      <table>
-        <tr><th>Room</th><th>Price</th></tr>
-        <tr><td>Twin Room</td><td class="highlight">€527</td></tr>
-        <tr><td>Single Room (King Bed)</td><td class="highlight">€973</td></tr>
-      </table>
+        <!-- Alicante -->
+        <div class="option">
+            <h2>Alicante</h2>
+            <ul>
+                <li><span class="label"><i class="fa-solid fa-plane-arrival"></i>Arrival (21:50)</span><span>€130</span></li>
+                <li><span class="label"><i class="fa-solid fa-plane-departure"></i>Departure (15:30)</span><span>€200</span></li>
+                <li><span class="label"><i class="fa-solid fa-hotel"></i>Accommodation</span><span>€30</span></li>
+                <li><span class="label"><i class="fa-solid fa-mug-hot"></i>Breakfast</span><span>€60</span></li>
+                <li><span class="label"><i class="fa-solid fa-car"></i>Car Hire</span><span>€60</span></li>
+                <li><span class="label"><i class="fa-solid fa-golf-ball-tee"></i>Golf</span><span>€280</span></li>
+            </ul>
+            <div class="total">Total: €760</div>
+        </div>
 
-      <h3>Golf (3 Rounds)</h3>
-      <table>
-        <tr><th>Courses</th><th>Price</th></tr>
-        <tr><td>Pinhal, Millennium & Laguna</td><td class="highlight">€157</td></tr>
-        <tr><td>Premium Old Course</td><td class="highlight">€253</td></tr>
-      </table>
-
-      <h3>Extras</h3>
-      <ul>
-        <li>World of Hyatt loyalty benefits</li>
-        <li>Parking: €15 per car / day</li>
-        <li>Luxury hotel experience</li>
-      </ul>
     </div>
-
-    <!-- DOM PEDRO -->
-    <div class="card">
-      <span class="badge">BEST VALUE</span>
-      <h2>Dom Pedro Portobelo</h2>
-
-      <h3>Accommodation (per person)</h3>
-      <table>
-        <tr><th>Room</th><th>Price</th></tr>
-        <tr><td>Twin Studio (Sea View)</td><td class="highlight">€297</td></tr>
-        <tr><td>Single Studio (Sea View)</td><td class="highlight">€593</td></tr>
-      </table>
-
-      <h3>Golf (3 Rounds)</h3>
-      <table>
-        <tr><th>Courses</th><th>Price</th></tr>
-        <tr><td>Pinhal, Millennium & Laguna</td><td class="highlight">€141</td></tr>
-        <tr><td>Premium Old Course</td><td class="highlight">€228</td></tr>
-      </table>
-
-      <h3>Extras</h3>
-      <ul>
-        <li>January Sale accommodation rates</li>
-        <li>Dom Pedro Club Card (10% golf discount)</li>
-        <li>Sea view studios</li>
-      </ul>
-    </div>
-
-  </div>
-
-  <footer>
-    Offer subject to availability · Valid for 72 hours · Tee times on request
-  </footer>
-
 </div>
 
 </body>
