@@ -2,144 +2,234 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Golf Trip Options</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vilamoura Golf Trip 2026</title>
 
-    <!-- Font Awesome Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f5f7fa;
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 30px;
-            color: #333;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
-        .option {
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            padding: 20px;
-        }
-        .option h2 {
-            margin-top: 0;
-            font-size: 18px;
-            border-bottom: 2px solid #2c7be5;
-            padding-bottom: 8px;
-        }
-        ul {
-            list-style: none;
             padding: 0;
-            margin: 0;
         }
-        li {
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2933;
+            line-height: 1.6;
+            background-color: #f5f7fa;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(
+                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.45)
+            ),
+            url("https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=1920&q=80");
+            background-size: cover;
+            background-position: center;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 7px 0;
-            border-bottom: 1px solid #eee;
-            font-size: 14px;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
         }
-        li:last-child {
-            border-bottom: none;
+
+        .hero-content {
+            max-width: 800px;
+            color: #ffffff;
         }
-        .label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
-        .label i {
-            color: #2c7be5;
-            width: 16px;
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #0f172a;
             text-align: center;
         }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #14532d;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: 600;
+            color: #14532d;
+        }
+
+        a {
+            color: #166534;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Total Cost */
         .total {
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 16px;
-            text-align: right;
+            background: #14532d;
+            color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .total h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .total p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Golf Trip Options</h1>
-
-    <div class="options">
-
-        <!-- Faro Shared -->
-        <div class="option">
-            <h2>Faro – Shared</h2>
-            <ul>
-                <li><span class="label"><i class="fa-solid fa-plane-arrival"></i>Arrival (20:20)</span><span>€108</span></li>
-                <li><span class="label"><i class="fa-solid fa-plane-departure"></i>Departure (09:20)</span><span>€152</span></li>
-                <li><span class="label"><i class="fa-solid fa-hotel"></i>Accommodation (Sharing)</span><span>€240</span></li>
-                <li><span class="label"><i class="fa-solid fa-bus"></i>Transfer</span><span>€25</span></li>
-                <li><span class="label"><i class="fa-solid fa-golf-ball-tee"></i>Golf</span><span>€513</span></li>
-            </ul>
-            <div class="total">Total: €1,038</div>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Vilamoura Golf Trip 2026</h1>
+            <p>9th – 13th April 2026 · Portugal</p>
         </div>
+    </section>
 
-        <!-- Faro Single -->
-        <div class="option">
-            <h2>Faro – Single</h2>
-            <ul>
-                <li><span class="label"><i class="fa-solid fa-plane-arrival"></i>Arrival (20:20)</span><span>€108</span></li>
-                <li><span class="label"><i class="fa-solid fa-plane-departure"></i>Departure (09:20)</span><span>€152</span></li>
-                <li><span class="label"><i class="fa-solid fa-hotel"></i>Accommodation (Single)</span><span>€448</span></li>
-                <li><span class="label"><i class="fa-solid fa-bus"></i>Transfer</span><span>€25</span></li>
-                <li><span class="label"><i class="fa-solid fa-golf-ball-tee"></i>Golf</span><span>€513</span></li>
-            </ul>
-            <div class="total">Total: €1,246</div>
-        </div>
+    <!-- Content -->
+    <main class="container">
 
-        <!-- Murcia -->
-        <div class="option">
-            <h2>Murcia</h2>
-            <ul>
-                <li><span class="label"><i class="fa-solid fa-plane-arrival"></i>Arrival (20:55)</span><span>€120</span></li>
-                <li><span class="label"><i class="fa-solid fa-plane-departure"></i>Departure (11:25)</span><span>€210</span></li>
-                <li><span class="label"><i class="fa-solid fa-hotel"></i>Accommodation</span><span>€30</span></li>
-                <li><span class="label"><i class="fa-solid fa-mug-hot"></i>Breakfast</span><span>€60</span></li>
-                <li><span class="label"><i class="fa-solid fa-car"></i>Car Hire</span><span>€60</span></li>
-                <li><span class="label"><i class="fa-solid fa-golf-ball-tee"></i>Golf</span><span>€280</span></li>
-            </ul>
-            <div class="total">Total: €760</div>
-        </div>
+        <!-- Pre Travel Costs -->
+        <section class="section">
+            <h2>Pre-Travel Costs</h2>
 
-        <!-- Alicante -->
-        <div class="option">
-            <h2>Alicante</h2>
-            <ul>
-                <li><span class="label"><i class="fa-solid fa-plane-arrival"></i>Arrival (21:50)</span><span>€130</span></li>
-                <li><span class="label"><i class="fa-solid fa-plane-departure"></i>Departure (15:30)</span><span>€200</span></li>
-                <li><span class="label"><i class="fa-solid fa-hotel"></i>Accommodation</span><span>€30</span></li>
-                <li><span class="label"><i class="fa-solid fa-mug-hot"></i>Breakfast</span><span>€60</span></li>
-                <li><span class="label"><i class="fa-solid fa-car"></i>Car Hire</span><span>€60</span></li>
-                <li><span class="label"><i class="fa-solid fa-golf-ball-tee"></i>Golf</span><span>€280</span></li>
-            </ul>
-            <div class="total">Total: €760</div>
-        </div>
+            <div class="cards">
+                <div class="card">
+                    <h3>Accommodation & Transfers</h3>
+                    <ul>
+                        <li>Sharing Room: <span class="price">€250</span></li>
+                        <li>Single Room: <span class="price">€450</span></li>
+                        <li>Breakfast Included</li>
+                        <li>Transfers to Golf Courses</li>
+                        <li>
+                            Hotel:
+                            <a href="https://portobelo.dompedro.com/en/" target="_blank">
+                                Dom Pedro Portobelo
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 
-    </div>
-</div>
+                <div class="card">
+                    <h3>Golf</h3>
+                    <ul>
+                        <li>Green Fees Package</li>
+                        <li class="price">€526</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Flights & Baggage</h3>
+                    <ul>
+                        <li>Flights (estimate): <span class="price">€287</span></li>
+                        <li>Golf Bag + 10kg Case: <span class="price">€267</span></li>
+                        <li>Without 10kg Case Available</li>
+                        <li><em>Prices may vary</em></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Total -->
+        <section class="section">
+            <div class="total">
+                <h3>Total Pre-Holiday Cost</h3>
+                <p>€1,063 (Sharing) · €1,263 (Single)</p>
+            </div>
+        </section>
+
+        <!-- Arrival Costs -->
+        <section class="section">
+            <h2>Arrival Costs</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Airport Transfers</h3>
+                    <p class="price">€25 per person</p>
+                </div>
+
+                <div class="card">
+                    <h3>Golf Buggies</h3>
+                    <p>€30 per buggy per round</p>
+                    <p class="price">€120 per person (total)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Vilamoura Golf Trip · All details subject to change
+    </footer>
 
 </body>
 </html>
