@@ -22,14 +22,14 @@
             background-color: #f5f7fa;
         }
 
-        /* Hero Section */
+        /* Hero */
         .hero {
             min-height: 100vh;
             background: linear-gradient(
-                rgba(0, 0, 0, 0.45),
-                rgba(0, 0, 0, 0.45)
+                rgba(0,0,0,0.45),
+                rgba(0,0,0,0.45)
             ),
-            url("https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=1920&q=80");
+            url("https://images.unsplash.com/photo-1593111774240-d529f12cf4bb?auto=format&fit=crop&w=1920&q=80");
             background-size: cover;
             background-position: center;
             display: flex;
@@ -54,18 +54,18 @@
             opacity: 0.95;
         }
 
-        /* Main Content */
+        /* Layout */
         .container {
             max-width: 1100px;
-            margin: 0 auto;
+            margin: auto;
             padding: 60px 20px;
         }
 
         h2 {
+            text-align: center;
             font-size: 2rem;
             margin-bottom: 30px;
             color: #0f172a;
-            text-align: center;
         }
 
         .section {
@@ -81,13 +81,12 @@
 
         .card {
             background: #ffffff;
-            border-radius: 12px;
             padding: 25px;
+            border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
 
         .card h3 {
-            font-size: 1.3rem;
             margin-bottom: 15px;
             color: #14532d;
         }
@@ -96,7 +95,7 @@
             list-style: none;
         }
 
-        .card ul li {
+        .card li {
             margin-bottom: 10px;
         }
 
@@ -105,17 +104,28 @@
             color: #14532d;
         }
 
-        a {
-            color: #166534;
-            text-decoration: none;
-            font-weight: 500;
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
         }
 
-        a:hover {
-            text-decoration: underline;
+        th, td {
+            padding: 8px;
+            text-align: center;
         }
 
-        /* Total Cost */
+        th {
+            background: #14532d;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background: #f0fdf4;
+        }
+
+        /* Total */
         .total {
             background: #14532d;
             color: #ffffff;
@@ -126,12 +136,11 @@
 
         .total h3 {
             font-size: 1.8rem;
-            margin-bottom: 10px;
         }
 
         .total p {
             font-size: 1.2rem;
-            opacity: 0.95;
+            margin-top: 10px;
         }
 
         /* Footer */
@@ -142,94 +151,136 @@
             padding: 25px;
             font-size: 0.9rem;
         }
+
+        a {
+            color: #166534;
+            text-decoration: none;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Vilamoura Golf Trip 2026</h1>
-            <p>9th – 13th April 2026 · Portugal</p>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Vilamoura Golf Trip 2026</h1>
+        <p>9–13 April 2026 · Portugal</p>
+    </div>
+</section>
+
+<main class="container">
+
+    <section class="section">
+        <h2>Pre-Travel Costs</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Accommodation & Transfers</h3>
+                <ul>
+                    <li>Sharing Room: <span class="price">€250</span></li>
+                    <li>Single Room: <span class="price">€450</span></li>
+                    <li>Breakfast Included</li>
+                    <li>Golf Course Transfers</li>
+                    <li>
+                        Hotel:
+                        <a href="https://portobelo.dompedro.com/en/" target="_blank">
+                            Dom Pedro Portobelo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Golf Schedule</h3>
+                <p>Total Package: <span class="price">€526 per person</span></p>
+
+                <div style="overflow-x:auto; margin-top: 15px;">
+                    <table>
+                        <tr>
+                            <th>Date</th>
+                            <th>Course</th>
+                            <th>Holes</th>
+                            <th>Time</th>
+                            <th>Price</th>
+                        </tr>
+                        <tr>
+                            <td>09 Apr</td>
+                            <td>Millennium</td>
+                            <td>Twilight</td>
+                            <td>15:30</td>
+                            <td>€103</td>
+                        </tr>
+                        <tr>
+                            <td>10 Apr</td>
+                            <td>Laguna</td>
+                            <td>18</td>
+                            <td>10:10</td>
+                            <td>€141</td>
+                        </tr>
+                        <tr>
+                            <td>11 Apr</td>
+                            <td>Pinhal</td>
+                            <td>18</td>
+                            <td>14:30</td>
+                            <td>€141</td>
+                        </tr>
+                        <tr>
+                            <td>12 Apr</td>
+                            <td>Millennium</td>
+                            <td>18</td>
+                            <td>14:00</td>
+                            <td>€141</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p style="font-size:0.85rem; margin-top:10px;">
+                    * Twilight round – 18 holes not guaranteed
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Flights & Baggage</h3>
+                <ul>
+                    <li>Flights + 10kg Check-in Bag: <span class="price">€287</span></li>
+                    <li>Flights (No Check-in Bag): <span class="price">€267</span></li>
+                    <li><em>Prices subject to change</em></li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
-    <!-- Content -->
-    <main class="container">
+    <section class="section">
+        <div class="total">
+            <h3>Total Pre-Holiday Cost</h3>
+            <p>€1,063 (Sharing) · €1,263 (Single)</p>
+        </div>
+    </section>
 
-        <!-- Pre Travel Costs -->
-        <section class="section">
-            <h2>Pre-Travel Costs</h2>
+    <section class="section">
+        <h2>Arrival Costs</h2>
 
-            <div class="cards">
-                <div class="card">
-                    <h3>Accommodation & Transfers</h3>
-                    <ul>
-                        <li>Sharing Room: <span class="price">€250</span></li>
-                        <li>Single Room: <span class="price">€450</span></li>
-                        <li>Breakfast Included</li>
-                        <li>Transfers to Golf Courses</li>
-                        <li>
-                            Hotel:
-                            <a href="https://portobelo.dompedro.com/en/" target="_blank">
-                                Dom Pedro Portobelo
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Golf</h3>
-                    <ul>
-                        <li>Green Fees Package</li>
-                        <li class="price">€526</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Flights & Baggage</h3>
-                    <ul>
-                        <li>Flights (estimate): <span class="price">€287</span></li>
-                        <li>Golf Bag + 10kg Case: <span class="price">€267</span></li>
-                        <li>Without 10kg Case Available</li>
-                        <li><em>Prices may vary</em></li>
-                    </ul>
-                </div>
+        <div class="cards">
+            <div class="card">
+                <h3>Airport Transfers</h3>
+                <p class="price">€25 per person</p>
             </div>
-        </section>
 
-        <!-- Total -->
-        <section class="section">
-            <div class="total">
-                <h3>Total Pre-Holiday Cost</h3>
-                <p>€1,063 (Sharing) · €1,263 (Single)</p>
+            <div class="card">
+                <h3>Golf Buggies</h3>
+                <p>€30 per buggy per round</p>
+                <p class="price">€120 per person</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Arrival Costs -->
-        <section class="section">
-            <h2>Arrival Costs</h2>
+</main>
 
-            <div class="cards">
-                <div class="card">
-                    <h3>Airport Transfers</h3>
-                    <p class="price">€25 per person</p>
-                </div>
-
-                <div class="card">
-                    <h3>Golf Buggies</h3>
-                    <p>€30 per buggy per round</p>
-                    <p class="price">€120 per person (total)</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        © 2026 Vilamoura Golf Trip · All details subject to change
-    </footer>
+<footer>
+    © 2026 Vilamoura Golf Trip · All details subject to change
+</footer>
 
 </body>
 </html>
